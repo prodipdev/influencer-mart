@@ -255,12 +255,17 @@ Start Media Queries for smaller devices
     }
     .header-plate {
         flex-wrap: wrap;
+        padding: 50px 27px;
     }
     main {
         margin: 0 15px;
     }
+    .product-container h2 {
+        margin-top: 50px;
+    }
     .product-collection {
         grid-template-columns: repeat(1, 1fr);
+        margin-top: 20px;
     }
     .bottom-banner {
         flex-direction: column-reverse;
