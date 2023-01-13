@@ -271,4 +271,7 @@ Start Media Queries for smaller devices
         flex-direction: column-reverse;
         gap: 30px;
     }
+    .bottom-banner p {
+        width: 100%;
+    }
 }
