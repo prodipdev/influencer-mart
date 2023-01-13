@@ -57,10 +57,12 @@ nav .right-side {
 .banner-info h1 {
     font-size: 52px;
     font-weight: 700;
+    margin-bottom: 16px;
 }
 .banner-info p {
     font-size: 16px;
     font-weight: 600;
+    line-height: 24px;
 }
 .banner-info button {
     border-radius: 40px;
