@@ -52,7 +52,7 @@ nav .right-side {
 
 .banner-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 133px;
     margin-top: 50px;
@@ -73,11 +73,12 @@ nav .right-side {
 }
 .banner-img img {
     background-image: url('../images/Circle\ design.svg');
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     max-width: 100%;
     background-repeat: no-repeat;
     padding: 33px;
+    align-items: center;
 }
 
 .header-plate {
@@ -228,7 +229,10 @@ Start Media Queries for smaller devices
 
 @media screen and (max-width: 576px) {
     body {
-        margin: 15px;
+        margin: 0;
+    }
+    nav {
+        margin: 30px 15px 0;
     }
     nav .menu {
         display: block;
@@ -241,6 +245,7 @@ Start Media Queries for smaller devices
         flex-direction: column-reverse;
         gap: 15px;
     }
+
     .banner-info {
         text-align: center;
     }
@@ -248,7 +253,7 @@ Start Media Queries for smaller devices
         flex-wrap: wrap;
     }
     main {
-        margin: 0;
+        margin: 0 15px;
     }
     .product-collection {
         grid-template-columns: repeat(1, 1fr);
