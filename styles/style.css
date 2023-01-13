@@ -71,15 +71,15 @@ nav .right-side {
 .banner-info button {
     border-radius: 40px;
 }
-.banner-img {
-    background-image: url('../images/Circle\ design.svg');
-    background-repeat: no-repeat;
-    max-height: 475px;
-    width: auto;
-}
 .banner-img img {
-    padding: 35px;
+    background-image: url('../images/Circle\ design.svg');
+    background-size: contain;
+    width: 100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    padding: 33px;
 }
+
 .header-plate {
     display: flex;
     align-items: center;
@@ -236,8 +236,13 @@ Start Media Queries for smaller devices
     nav .right-side .none {
         display: none;
     }
+
     .banner-container {
         flex-direction: column-reverse;
+        gap: 15px;
+    }
+    .banner-info {
+        text-align: center;
     }
     .header-plate {
         flex-wrap: wrap;
