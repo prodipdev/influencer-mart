@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Work+Sans:wght@400;500;600;700&display=swap');
 body {
@@ -75,15 +74,23 @@ nav .right-side {
 .banner-info button {
     border-radius: 40px;
 }
-.banner-img .img {
-    background-image: url('../images/Circle\ design.svg');
-    background-size: cover;
-    max-width: 100%;
-    height: 440px;
-    background-repeat: no-repeat;
-    align-items: center;
-}
 
+.banner-img {
+    position: relative;
+}
+.banner-img .main-img {
+    max-width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner-img .bg-img {
+    max-width: 475px;
+    position: relative;
+    z-index: 0;
+}
 
 .header-plate {
     display: flex;
@@ -175,7 +182,8 @@ main {
     gap: 95px;
 }
 .bottom-banner img {
-    max-width: 404px;
+    max-width: 100%;
+    background-size: cover;
 }
 .bottom-banner h2 {
     font-size: 38px;
@@ -243,19 +251,34 @@ Start Media Queries for smaller devices
     nav .right-side .none {
         display: none;
     }
-
+    .banner-info h1 {
+        font-size: 28px;
+    }
+    .banner-info p {
+        font-size: 14px;
+    }
     .banner-container {
         flex-direction: column-reverse;
         gap: 15px;
         padding: 0;
     }
-
+    .banner-img .bg-img {
+        max-width: 100%;
+    }
+    .product-item h3 {
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .product-item .price {
+        font-size: 24px;
+        font-weight: 600;
+    }
     .banner-info {
         text-align: center;
     }
     .header-plate {
         flex-wrap: wrap;
-        padding: 50px 27px;
+        padding: 0;
     }
     main {
         margin: 0 15px;
@@ -273,5 +296,60 @@ Start Media Queries for smaller devices
     }
     .bottom-banner p {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    nav .menu {
+        display: block;
+    }
+    nav .right-side .none {
+        display: none;
+    }
+    .banner-container {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+    .header-plate {
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    main {
+        margin: 0 50px;
+    }
+    .product-container h2 {
+        margin-top: 50px;
+    }
+    .product-collection {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .bottom-banner {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    main {
+        margin: 0 80px;
+    }
+    .banner-container {
+        flex-direction: column-reverse;
+        gap: 80px;
+    }
+    .product-collection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .bottom-banner {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+}
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    .banner-container {
+        gap: 20px;
+    }
+    main {
+        margin: 0 30px;
     }
 }
