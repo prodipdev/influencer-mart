@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Work+Sans:wght@400;500;600;700&display=swap');
 body {
@@ -295,7 +296,13 @@ Start Media Queries for smaller devices
         gap: 30px;
     }
     .bottom-banner p {
+        font-size: 16px;
+        line-height: 28px;
         width: 100%;
+    }
+    .bottom-banner h2 {
+        font-size: 24px;
+        line-height: 36px;
     }
 }
 
